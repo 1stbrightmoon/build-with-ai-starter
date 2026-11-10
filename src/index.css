@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --tv-bg: #131722;
+    --tv-surface: #1e222d;
+    --tv-border: #2a2e39;
+    --tv-text: #d1d4dc;
+    --tv-text-muted: #787b86;
+    --tv-green: #089981;
+    --tv-red: #f23645;
+    --tv-blue: #2962ff;
+  }
+
+  html.light {
+    --tv-bg: #ffffff;
+    --tv-surface: #f0f3fa;
+    --tv-border: #e0e3eb;
+    --tv-text: #131722;
+    --tv-text-muted: #787b86;
+    --tv-green: #089981;
+    --tv-red: #f23645;
+    --tv-blue: #2962ff;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono,
+  .tabular-nums {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars like TradingView */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 123, 134, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 123, 134, 0.5);
+}
